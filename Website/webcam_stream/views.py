@@ -4,9 +4,6 @@ from django.http import StreamingHttpResponse
 from django.views.decorators import gzip
 import threading
 
-# Erstelle eine globale Instanz der VideoCamera-Klasse
-global_cam = VideoCamera()
-
 class VideoCamera:
     def __init__(self):
         # Initialisierung der Webcam
@@ -36,6 +33,9 @@ def gen(camera):
         frame = camera.get_frame()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+
+# Erstelle eine globale Instanz der VideoCamera-Klasse
+global_cam = VideoCamera()
 
 # Dekorator, der die Antwort komprimiert, bevor sie an den Client gesendet wird
 @gzip.gzip_page
