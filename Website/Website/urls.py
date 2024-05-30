@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from uhrzeit.views import get_uhrzeit
 from hallo.views import hallo
+from webcam_stream.views import livefe
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("uhrzeit/", get_uhrzeit, name="uhrzeit"),
-    path("hallo/", hallo, name="hallo",)
+    path("hallo/", hallo, name="hallo",),
+    path('livefe/', livefe, name='livefe'),
 ]
