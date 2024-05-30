@@ -1,3 +1,0 @@
-Django wird als Service eingetragen und das über die erstellte Datei unter /etc/systemd/system/django_server.service
-
-Start von Chromium /etc/xdg/autostart/chomium.desktop
