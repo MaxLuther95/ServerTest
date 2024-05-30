@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Comic Neue -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Danfo -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Danfo&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                background-color: #3f3f3f;
+                color: #1bec1b;
+                text-align: center;
+                font-size: 100px;
+                font-family: "Danfo", serif;
+            }
+        </style>
+    </head>
+    <body>
+        Willkommen{{ besucher }}!<br>
+        <!--Es ist <span id="uhrzeit"></span><br>-->
+        <iframe src="http://0.0.0.0:8085/stream_simple.html" width="660" height="500"></iframe>
+        <!--<script>
+            function updateUhrzeit(){
+                fetch("/uhrzeit/")
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("uhrzeit").textContent = data.updateUhrzeit;
+                    });
+            }
+            setInterval(updateUhrzeit, 1000);
+        </script>-->
+    </body>
+</html>
