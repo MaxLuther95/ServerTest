@@ -38,7 +38,7 @@
     <body>
         Willkommen <input type="text"></input>!<br>
         <!--Es ist <span id="uhrzeit"></span><br>-->
-        <iframe src="http://0.0.0.0:8000/livefe/" width="660" height="500"></iframe>
+        <iframe src="{% url 'webcam_stream' %}" width="640" height="480"></iframe>
         <!--<script>
             function updateUhrzeit(){
                 fetch("/uhrzeit/")
