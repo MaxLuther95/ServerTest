@@ -21,7 +21,7 @@ from hallo.views import hallo
 from webcam_stream.views import show_video_on_page
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path("uhrzeit/", get_uhrzeit, name="uhrzeit"),
     path("hallo/", hallo, name="hallo",),
     path('webcam_stream/', show_video_on_page, name='webcam_stream'),
