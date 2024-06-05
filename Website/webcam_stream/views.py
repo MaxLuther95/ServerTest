@@ -12,8 +12,8 @@ def Home(request):
         pass
 
 class VideoCamera(object):
-    def __init__(self, cam_filename):
-        self.video = cv2.VideoCapture(filename = cam_filename)
+    def __init__(self, cam_id):
+        self.video = cv2.VideoCapture(cam_id)
         (self.grabbed, self.frame) = self.video.read()
         threading.Thread(target = self.update, args = ()).start()
     
@@ -35,4 +35,4 @@ def gen(camera: VideoCamera):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
-cam = VideoCamera('/dev/video0')
+cam = VideoCamera(0)

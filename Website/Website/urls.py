@@ -18,13 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from uhrzeit.views import get_uhrzeit
 from hallo.views import hallo, hallo2
-from webcam_stream.views import show_video_on_page
+from webcam_stream.views import Home
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path("uhrzeit/", get_uhrzeit, name="uhrzeit"),
     path("hallo/", hallo, name="hallo",),
     path("seite_2/", hallo2, name="zwei",),
-    path('webcam_stream/', show_video_on_page, name='webcam_stream'),
+    path('webcam_stream/', Home, name='webcam_stream'),
     path("", hallo, name="index",),
 ]
